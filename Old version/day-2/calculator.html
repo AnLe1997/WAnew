@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    Nhập Số Thứ Nhất: <input id="num-1">
+    <br>
+    <br>
+    Nhập Số thứ Hai : <input id="num-2"> 
+    <br>
+    <br>
+    <button onclick="add()">+</button>
+    <button onclick="subtract()">-</button>
+    <button onclick="multiple()">*</button>
+    <button onclick="division()">/</button>
+<script>
+    function add() {
+        var number1 = document.getElementById('num-1').value;
+        var number2 = document.getElementById('num-2').value;
+        number1 = parseInt(number1)
+        number2 = parseInt(number2)
+        alert(number1 + number2)
+    }
+
+    function subtract() {
+        var number1 = document.getElementById('num-1').value;
+        var number2 = document.getElementById('num-2').value;
+        number1 = parseInt(number1)
+        number2 = parseInt(number2)
+        alert(number1 - number2)
+    }
+
+    function multiple() {
+        var number1 = document.getElementById('num-1').value;
+        var number2 = document.getElementById('num-2').value;
+        number1 = parseInt(number1)
+        number2 = parseInt(number2)
+        alert(number1 * number2)
+    }
+
+</script>
+
+</body>
+</html>

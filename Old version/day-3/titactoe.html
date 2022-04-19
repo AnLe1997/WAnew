@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <style>
+        .cell {
+            width: 100px;
+            height: 100px;
+            font-size: 20pt;
+        }
+
+        .row {
+            margin-top: 5px; 
+        }
+    </style>
+</head>
+<body>
+    <center style="margin-top: 200px;">
+        <div class="row">
+            <button id="cell-1" onClick="move('cell-1')" class="cell">.</button>
+            <button id="cell-2" onClick="move('cell-2')" class="cell">.</button>
+            <button id="cell-3" onClick="move('cell-3')" class="cell">.</button>
+        </div>
+        <div class="row">
+            <button id="cell-4" onClick="move('cell-4')" class="cell">.</button>
+            <button id="cell-5" onClick="move('cell-5')" class="cell">.</button>
+            <button id="cell-6" onClick="move('cell-6')" class="cell">.</button>
+        </div>
+        <div class="row">
+            <button id="cell-7" onClick="move('cell-7')" class="cell">.</button>
+            <button id="cell-8" onClick="move('cell-8')" class="cell">.</button>
+            <button id="cell-9" onClick="move('cell-9')" class="cell">.</button>
+        </div>
+    </center>
+    
+</body>
+<script>
+    var isPlayOne = true;
+    function move (index) {
+        var cell = document.getElementById(index);
+        if(cell.textContent !='.') {
+            return 
+        } 
+        if(isPlayOne) {
+            cell.textContent = 'X';
+            cell.style.color = 'Red';
+            isPlayOne = false;
+        } else {
+            cell.textContent = 'O';
+            cell.style.color = 'blue';
+            isPlayOne = true;
+        }
+        checkVictory();
+    }
+
+    function checkVictory () {
+        var cell1 = document.getElementById('cell-1').textContent;
+        var cell2 = document.getElementById('cell-2').textContent;
+        var cell3 = document.getElementById('cell-3').textContent;
+        var cell4 = document.getElementById('cell-4').textContent;
+        var cell5 = document.getElementById('cell-5').textContent;
+        var cell6 = document.getElementById('cell-6').textContent;
+        var cell7 = document.getElementById('cell-7').textContent;
+        var cell8 = document.getElementById('cell-8').textContent;
+        var cell9 = document.getElementById('cell-9').textContent;
+        // ================= Hang ngang ========================//
+        if(cell1 == cell2 && cell1 == cell3 && cell1 != '.') {
+            victory();
+            return;
+        }
+        if(cell4 == cell5 && cell4 == cell6 && cell4 != '.') {
+            victory();
+            return;
+        }
+        if(cell7 == cell8 && cell7 == cell9 && cell9 != '.') {
+            victory();
+            return;
+        }
+        // ================= Cot doc ========================//
+        if(cell1 == cell4 && cell1 == cell7 && cell1 != '.') {
+            victory();
+            return;
+        }
+        if(cell2 == cell5 && cell2 == cell8 && cell2 != '.') {
+            victory();
+            return;
+        }
+        if(cell3 == cell6 && cell3 == cell9 && cell3 != '.') {
+            victory();
+            return;
+        }
+       // ================= Duong cheo ========================//
+       if(cell1 == cell5 && cell1 == cell9 && cell1 != '.') {
+            victory();
+            return;
+        }
+        if(cell3 == cell5 && cell3 == cell7 && cell3 != '.') {
+            victory();
+            return;
+        }
+    }
+
+    function victory () {
+        alert("Victory");
+        var cell1 = document.getElementById('cell-1').textContent = '.';
+        var cell2 = document.getElementById('cell-2').textContent = '.';
+        var cell3 = document.getElementById('cell-3').textContent = '.';
+        var cell4 = document.getElementById('cell-4').textContent = '.';
+        var cell5 = document.getElementById('cell-5').textContent = '.';
+        var cell6 = document.getElementById('cell-6').textContent = '.';
+        var cell7 = document.getElementById('cell-7').textContent = '.';
+        var cell8 = document.getElementById('cell-8').textContent = '.';
+        var cell9 = document.getElementById('cell-9').textContent = '.';
+    }
+</script>
+</html>

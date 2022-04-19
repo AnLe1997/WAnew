@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Page Title</title>
+    <script src="jquery-3.3.1.js"></script>
+    
+</head>
+<body>
+    <h1>Array</h1>
+    <h2 id="array"></h2>
+</body>
+<script>
+    var list = ["1", "2", "3", 1000];
+    var views = $("#array");
+
+    views.text(list);
+
+    function createHeading(content){
+        var newElement = $("<h1></h1>")
+        newElement.text(content);
+        newElement.css({
+            "color": "red"
+        });
+        $("body").append(newElement);
+    }
+
+    function createImage(src) {
+        var newImage = $("<img>")
+        newImage.attr("src", src);
+        $("body").append(newImage);
+    }
+
+    createImage("https://images.pexels.com/photos/35646/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=650&w=940");
+    createImage("https://images.pexels.com/photos/3795/meadow-flower-poppy-wild-poppies.jpg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=500&w=500");
+    createHeading("New Tag");
+</script>
+</html>

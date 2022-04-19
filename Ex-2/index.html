@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1 id="special">Đây là bài 2</h1>
+    <button onclick="printhello()">Click to alert</button>
+    <script>
+        // let firstVariable = "MindX";
+        // console.log(firstVariable);
+        // firstVariable = 1;
+        // console.log(firstVariable);
+
+        // const pi = 3.14;
+        // console.log(pi);
+
+        // let tenNguoiDung = prompt("Ban ten gi")
+        // console.log(tenNguoiDung);
+
+        //Ở đây tôi sẽ sử dụng DOM
+        document.getElementById("special").innerHTML = "Đây là trường lập trình MindX";
+        document.getElementById("special").style.background = "red";
+        let special = document.getElementById("special")
+        console.log(special)
+        console.dir(special)
+
+        //Sang phần hàm
+
+        // console.log("lorem ipsum")
+        // console.log("MindX")
+        // console.log("lorem ipsum")
+        // console.log("MindXSchool")
+        // console.log("lorem ipsum")
+        // console.log("Startup")
+
+        let printhello = function() 
+        {
+            console.log("Xin chao moi nguoi")
+        }
+
+        printhello()
+        printhello()
+        printhello()
+        printhello()
+        printhello() 
+    </script> -->
+
+    <!-- Nhấn nút đổi màu -->
+    <!-- <div style="height: 200px; width: 200px; background-color: red;" id="square"></div>
+    <button onclick="ChangeBlue()">Blue</button>
+    <button onclick="ChangeYellow()">Yellow</button>
+    <button onclick="ChangeGreen()">Green</button>
+    <button onclick="ChangeRed()">Red</button>
+    <script>
+        let square = document.getElementById("square")
+        let ChangeBlue = function()
+        {
+            square.style.backgroundColor = "blue";
+        }
+        let ChangeYellow = function()
+        {
+            square.style.backgroundColor = "yellow";
+        }
+        let ChangeGreen = function()
+        {
+            square.style.backgroundColor = "green";
+        }
+        let ChangeRed = function()
+        {
+            square.style.backgroundColor = "red";
+        }
+    </script> -->
+
+    <!-- Tắt mở đèn -->
+    <img id="lightbulb" src="data:image/jpeg;base64,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" alt="">
+    <button onclick="TurnOn()">Turn On</button>
+    <button onclick="TurnOff()">Turn Off</button>
+    <script>
+        let lightbulb = document.getElementById("lightbulb")
+        let TurnOn = function()
+        {
+            lightbulb.src = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgICggICAgICQgJCAoICAgICA8ICQgLIBEWIhYdHxMaHTQvJCYoJxMTIUQoKCw3MDE+IzA/UEU4Qzo5PTcBCgoKDg0OGhAQGC4hHSE3LS8uMi0rMDc3LTc3Kys3KzcrODc3KystMCstKysrKysrKysrKysrKystKysrKysrK//AABEIAMQAhwMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAAAQIDBAUHBgj/xAA+EAACAQIDAwcJBgUFAAAAAAAAAQIDEQQhMQUSQQYTIlFhcYEHFCMyQpGhscEVM1Ji0dNDRHKU8SRkc4TD/8QAGgEBAAIDAQAAAAAAAAAAAAAAAAEDAgQGBf/EACYRAQACAgEEAQMFAAAAAAAAAAABAgMRBAUSEzEhFSNBIjJCUWH/2gAMAwEAAhEDEQA/APcQAAIZJDZEzoCLoxVK8Y5avqRrTrTlx3V1LU0M/UMeP49yyisy3ZTitWY+fpr217zQfiQzzbdXn8Qz8boqvTeW/H3l00zkhSlHRtdqdjKnV5/lCPG7AOZTxk4vp9KK9rQ3qNaFTOLV+PWj08HNx5fUsZrMMpJCJNxiAAkAAAIZJDIEN8TVrVtVH4FsRUzsvE19cnrl7zwufzZmfHRbWv5RxtxfVqZY0JPNvhpxMtGjbNrpfIzkcXp3dHdkRN3MnHdbj1P4FDcxlO63lqtTTbed9bZHl8vB4skwsrO4VlqQySrNZJIrGbg1KLtJadoZRmdLzX5hDqYXFKp0ZO1RJZcDcR88puDjJZSTyZ2cJXVaN9GspI6Lgc3yR229qrV02CSCUeuwAABBjrT3VcymriZaR68zU5mXx4pllWNy17311zbM+GhfpO3YYYq7SXWb0EkkjxunYPLknJZZedfCxSpNQV29CZOybOfWqObfUtD1ebyow0+PautdlWtObtouHaYXlqixSWpy2TLOS25XRGkMqWZDK0qMqyWVYQqzLhK7o1E/ZllN9SMLKSto+OXeX4Mk0vEwTG300STWwNR1KNOT9bdtLv4m0dhiv30iVEgALUIZpV/WfgbsvoaNb15eHyPJ6tP2mdPa2HjeV+o2zVwtry8DYckienTWmHclvbDjJ2ju8WvhxNPTuMuJnvSys0kjCeN1DN5Mv+LKx8IKsllWaDJUhksqyRVlWWZSQQqyr/UkpImB1tiy9HOP4Z/Q6hyNh/xv6o/U6yOu4E7wwpt7SADdYoZpYhWk+43TWxcdJdVzzepY+7EypPy1k2tHbx1Il437WT+iKM5fyXiNbXBVksqYe0oKsllSRDKssyjAhmORdlGSKlX+rZLK5PIyrG50h2djR9HKX4p/Cx0Ua+Bp81Spweqj0u/ibCOw4lOzFEKJ9pABsoDHVipJp6MyEMwvWLV1I5jVm4+BVm5iaV+nHVfI03fw4HI8vjWxZJ/pfE7hBVkkSNNKgYsQ1YnQqyrLWKyROhSRRl2irROhjZs7OoOrVjJ+pT6T7Xw+phhTlUkoxSk3omd7B0I0YKCzespfifWelwOLOS/dPqGNrM6LEEnTxGoUgAJAAhgQzRxUN1360b5gxUd6Eu65o83BF8csqz8tAqw3x7EQzlZjUrgqySjAMq8yWAKNENdfeWZajDfnGP4pWfdx+FyzHXutEEt/Z2H3I78rb8le/wCU30RHLIk63j4ox0iIUTKQAXoAAAAAEET0LFJ6FeX9kphxb6dwbMSencRvHFZLfqlsxDLcrcpvDeMO8XuQ2U3iGyO8XZnwH30PH5M1bmxs9+nh3S+RtcS33YRb07i0JIRJ2VfTWAASAAAAAAUmsmXKsxtG40Pm6kZU5OEnnF2ZW53MXhYVk24rftaD6meVz5Rco6TdOpR2XCpF7lSnPC14ypy4q3OHM5+k5JvurYjJGn3Fxc+CfKnlBH+Hsj+2r/uFHyt2/G/o9j5/7av+4U/SMyfJV9+2Lnnr5Y7fV/R7I/t66/8AQxvlpt5Z8zsh/wDXr/uk/SMx5YejG7sqDlV3r5QWfe9PqfD8i9u7Z21tGGFxOGwPmcKdSpiZ4WhWjOGXRzc2lnY9OoU4U1uxSSWiRt8Tpd6ZItaWFr7hkRYhEnQwpAASAAAAAAAAKv6HgXKPD8nMPjJ09mYqdegoLfd5y9Nd7yvY98lw/wAs8U5S43EVMW3h+TtXZseZhCNCqoYS6Tl0t2y1zA+aSoPKlhsRL83N5Dzeq/5eUFwcmkb7ltKescNT7HJtmKVPE61MUo34QikgNR4KftKCXY5FXhYR1UdLt7u9b3meUKa9fESk/wDl0MbVFereWetmB6H5JaOBi603jJrHqdaFLARr2ovD7tK8+b673W92Hp0fqzzTyT1aP+opfZk3UlVrT+1vNo81Thu07U+c69ZbvaeloCwAAAAAAAAAAAADHO90eN8sMLt7z6X2ltDBqrzEJLzPD+jVO8ra2dz2SWvHqaPLeVnIOjg7bQhWxuPpZrFTxeI52tSd9bpaZ6cAPi6lKkvvdpzk75pVYxXuzMLWz46Tc3rrLP4HUjs7Cx9WjTXHNb7XizIsLBer0f6Uogcjfpexh2+100viQ5StlT3dOOfwOu8JGWsp+BVbOjUahDnpznJQhCEVKc5PRJcXoB9n5Jo7S5nEOM8J9l+c1udhaXnbxe5S04btreNz0ZHA5FbDnsTAvDVZOVWvXeLqx3t9UZOMVa/H1F43PoEBIAAAAAAAAAAAAAY60I1IyhJJwnFxkn7S4mQAfnvlryW23ybnKt53jcTsqVS2Hx0K9TepK+Snn0Xwvo31XsvlvPMWv5vF66rEVFf4n6nxFKnWhOlVhGpTqRcKlOpBThOPFNM8y275IcLia8q2ydoPA0Zu7wVfDyxVGD/LLfTS7HfwVkB5KsbjLqKxeLcpNKMVianSfDR9p675MeR21MJWhtrbNXFU5qlOOD2fWqyqVI3XrzT0dm1u65555LsckPJ3s3YE44utUe0dox+7xVSiqdPC5+xBt2fa2+y13f7SPH36AXRIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH//2Q==";
+        }
+        let TurnOff = function()
+        {
+            lightbulb.src = "data:image/jpeg;base64,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";
+        }
+    </script>
+</body>
+</html>

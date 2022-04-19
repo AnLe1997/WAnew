@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" style="width: 100%; height: 100%;">
+        <div id="leftSidebar">
+
+        </div>
+        <div id="rightSidebar">
+            <h1>Login</h1>
+            <input id="email" type="email" placeholder="Email">
+            <input id="password" type="password" placeholder="Password">
+            <button class="formButton" onclick="signIn()">SIGN IN</button>
+            <p>Don't have account? <a href="#">Create Account</a></p>
+            <p id="checkCase"></p>
+        </div>
+    </div>
+
+    <script>
+        function signIn(){
+            let input_email = document.getElementById("email").value;
+            let input_password = document.getElementById("password").value; 
+            let caseBlock = document.getElementById("checkCase");
+
+            let listUsers = JSON.parse(localStorage.getItem("listUsers"));
+            let listPassword = JSON.parse(localStorage.getItem("listPassword"));
+
+            for(let i = 0; i < listUsers.length && i < listPassword.length; i++){
+                if (input_email == listUsers[i] && input_password == listPassword[i]){
+                    caseBlock.style.display = "block";
+                    caseBlock.innerHTML = "Sign in successful";
+                    caseBlock.style.color = "green";
+                    console.log("Email: ", input_email);
+                    console.log("Password: ", input_password);
+                }
+                else{
+                    caseBlock.innerHTML = "Login false, please try again";
+                    caseBlock.style.color = "red";
+                }
+            }   
+        }
+    </script>
+</body>
+</html>

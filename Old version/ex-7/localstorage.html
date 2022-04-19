@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Tên: Đào Tuấn Anh</h1>
+    <input id="birthday" placeholder="Nhập Năm Sinh"> <button onclick="calculateAge()">calculate</button>
+    <h2 id="age">Tuổi:   </h2>
+</body>
+<script>
+    loadData();
+    function calculateAge() {
+        var birthday = $('#birthday').val();
+        var age = new Date().getFullYear() - birthday;
+        $('#age').text('Tuổi: ' + age);
+        saveData();
+    }
+
+    function saveData() {
+        localStorage.birthday = $('#birthday').val();
+    }
+
+    function loadData() {
+        var birthday = localStorage.birthday;
+        $('#birthday').val(birthday);
+        calculateAge()
+    }
+</script>
+</html>

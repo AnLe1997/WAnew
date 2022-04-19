@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+    
+</body>
+<script>
+    var array = [2, 3, 7, 0, 9, 11, 8];
+
+    function findMin(input) {
+        var min = array[0];
+        for (var i = 0; i < array.length; i++) {
+            if(array[i] < min) {
+                min = array[i];
+            }
+        }
+        return min;
+    }
+    
+    function findMax(input) {
+        var max = array[0];
+        for (var i = 0; i < array.length; i++) {
+            if(array[i] > max) {
+                max = array[i];
+            }
+        }
+        return max;
+    }
+
+    alert("số nhỏ nhất: " + findMin(array)); 
+    alert("số lớn nhất: " + findMax(array)); 
+</script>
+</html>

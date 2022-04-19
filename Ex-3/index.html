@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="nice-body">
+    <!-- <h1 id="first">Nội dung đầu tiên</h1>
+    <h1 id="second">Nội dung thứ 2</h1> -->
+    <ul id="list"></ul>
+    <button onclick="printToDoList()">Click to show to-do list</button>
+    <script>
+        // let body = document.getElementById("nice-body");
+        // // let h1 = "<h1>Đây là thẻ h1 tự động thêm vào";
+        // // body.innerHTML += h1;
+        // let newH1 = document.createElement("h1")
+        // newH1.innerHTML = "Đây là thẻ h1 được tạo ra bằng create element"
+        // body.appendChild(newH1)
+
+        // let h1 = document.getElementById("first");
+        // h1.remove()
+
+        // let body = document.getElementById("nice-body");
+        // // let h1 = "<h1>Đây là thẻ h1 tự động thêm vào";
+        // // body.innerHTML += h1;
+        // let ToDoJob1 = document.createElement("h1")
+        // ToDoJob1.innerHTML = "Lập trình trang web"
+        // body.appendChild(ToDoJob1)
+
+        // let ToDoJob2 = document.createElement("h1")
+        // ToDoJob2.innerHTML = "Lập trình trang web"
+        // body.appendChild(ToDoJob2)
+
+        // let ToDoJob3 = document.createElement("h1")
+        // ToDoJob3.innerHTML = "Lập trình trang web"
+        // body.appendChild(ToDoJob3)
+
+        // let ToDoJob4 = document.createElement("h1")
+        // ToDoJob4.innerHTML = "Lập trình trang web"
+        // body.appendChild(ToDoJob4)
+
+        // let ToDoJob5 = document.createElement("h1")
+        // ToDoJob5.innerHTML = "Lập trình trang web"
+        // body.appendChild(ToDoJob5)
+
+        let viecCanLam = ["Lập trình trang web", "Giúp mẹ", "Lau nhà", "Làm bài tập về nhà", "Rửa bát"]
+        // console.log(viecCanLam)
+        
+        // //Create
+        // //console.log(viecCanLam.length)
+        // viecCanLam.push("Dọn dẹp phòng")
+        // console.log(viecCanLam)
+        
+        // //Read
+        // let viecLamDauTien = viecCanLam[0]
+        // console.log(viecLamDauTien)
+        
+        // //Update
+        // viecCanLam[1] = "Giúp bố"
+        // console.log(viecCanLam[1])
+
+        // //Delete
+        // viecCanLam.splice(3,1)
+        // console.log(viecCanLam)
+        
+        //Tạo mảng
+        // let list = document.getElementById("list")
+        // let ToDoJob1Tag = document.createElement("li")
+        // ToDoJob1Tag.innerHTML = viecCanLam[0]
+        // list.appendChild(ToDoJob1Tag)
+
+        // let ToDoJob2Tag = document.createElement("li")
+        // ToDoJob2Tag.innerHTML = viecCanLam[1]
+        // list.appendChild(ToDoJob2Tag)
+
+        // let ToDoJob3Tag = document.createElement("li")
+        // ToDoJob3Tag.innerHTML = viecCanLam[2]
+        // list.appendChild(ToDoJob3Tag)
+
+        // let ToDoJob4Tag = document.createElement("li")
+        // ToDoJob4Tag.innerHTML = viecCanLam[3]
+        // list.appendChild(ToDoJob4Tag)
+
+        // let ToDoJob5Tag = document.createElement("li")
+        // ToDoJob5Tag.innerHTML = viecCanLam[4]
+        // list.appendChild(ToDoJob5Tag)
+
+        //Vòng lặp
+        for(let i = 0; i<10; i++)
+        {
+            console.log("Hello")
+        }
+
+        let printToDoList = function()
+        {
+            for(let i = 0; i<viecCanLam.length; i++)
+            {
+                let ToDoJobTag = document.createElement("li")
+                ToDoJobTag.innerHTML = viecCanLam[i]
+                list.appendChild(ToDoJobTag)
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading-1">This is h1 tag with "heading-1" id</h1>
+    <input type="text" id="myinput">
+    <script>
+        let h1 =  document.getElementById("heading-1")
+        h1.addEventListener("click", function(){
+            console.log("Ban da click vao the h1 nay")
+        })
+
+        //mouse enter
+        h1.addEventListener("mouseenter", function(){
+            console.log("Ban da dua chuot vao the h1 nay")
+            h1.style.color = "red"
+        })
+
+        //mouse leave
+        h1.addEventListener("mouseleave", function(){
+            console.log("Ban da dua chuot ra khoi the h1 nay")
+            h1.style.color = "blue"
+        })
+
+        //double click
+        h1.addEventListener("dblclick", function(){
+            console.log("Ban da click chuot 2 lan")
+        })
+
+        let myInput = document.getElementById("myinput")
+        myInput.addEventListener("keypress", function(data){
+            console.log(data.key)
+        })
+    </script>
+</body>
+</html>

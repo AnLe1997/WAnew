@@ -1,0 +1,23 @@
+<!doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <style>
+        h1 {
+            transition: 2s;
+        }
+    </style>
+</head>
+<body>
+    <center><h1 id="text" style="color:aquamarine">Hello There!</h1></center>
+    <center onClick="changeColor()"><button>change color</button></center>
+</body>
+<script>
+    function changeColor() {
+        var text = document.getElementById("text");
+        text.style.color = "red";
+        text.textContent = "Hello Tuấn Anh";
+        text.style.visibility = "hidden";
+    }
+</script>
+</html>

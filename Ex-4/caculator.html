@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Basic Caculator</h1>
+        <table border="1">
+            <tr>
+                <td colspan="3"><input id="result" type="text"></td>
+                <td><button onclick="clr()">Clear</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="display(7)">7</button></td>
+                <td><button onclick="display(8)">8</button></td>
+                <td><button onclick="display(9)">9</button></td>
+                <td><button onclick="setOperator('*')">x</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="display(4)">4</button></td>
+                <td><button onclick="display(5)">5</button></td>
+                <td><button onclick="display(6)">6</button></td>
+                <td><button onclick="setOperator('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="display(1)">1</button></td>
+                <td><button onclick="display(2)">2</button></td>
+                <td><button onclick="display(3)">3</button></td>
+                <td><button onclick="setOperator('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="display(0)">0</button></td>
+                <td><button onclick="display('.')">.</button></td>
+                <td><button onclick="solve()">=</button></td>
+                <td><button onclick="setOperator('-')">-</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- <script>
+        Số đầu tiên + toán tử (+ - * /) + số thứ 2 = kết quả
+        let soDauTien
+        let ToanTu
+        let soThuHai
+
+        Khi ta nhấn số n
+        Kiểm tra nếu thông tin đang hiện thị là các dấu (+, -, *, /) thì phải xóa phần nội dung
+        Lấy số đang hiện
+        Và sửa thông tin đang hiện thành số n vào cuối đọan thông tin đang hiện ra
+        Tương tự với các nút từ 1 -> 9 dấu .
+
+        Hàm pháp
+            Lưu số hiện tại vào biến soDauTien
+            Xóa hết số đang hiện
+            Thay thông tin bằng dấu tương ứng
+            Lưu toán tử vào biến ToanTu
+
+        Tạo ra hàm tính toán
+            Lưu lại thông tin vào biến soThuHai
+            Tạo 1 biến để lưu kết quả ketqua = 0;
+            Kiểm tra ToanTu
+            Nếu ToanTu === "+" ta sẽ thực hiện phép cộng
+                ketqua = soDauTien + soThuHai
+
+            Tương tự với các dấu còn lại
+            Cho hiện thị phần nội dung = ketqua
+    </script> -->
+    <script>
+        let soDauTien
+        let soThuHai
+        let ToanTu
+        let display = function(n)
+        {
+            let result = document.getElementById("result")
+            if (result.value == "+" || result.value == "-" || result.value == "*" || result.value == "/")
+            {
+                result.value ="";
+            }
+            result.value += n;
+        }
+
+        let setOperator = function(n)
+        {
+            let result = document.getElementById("result");
+            soDauTien = result.value;
+            result.value = n; //n chính là tên toán tử
+            ToanTu = n;
+        }
+
+        let solve = function()
+        {
+            let result = document.getElementById("result");
+            soThuHai = result.value;
+            let ketqua = 0;
+            soDauTien = parseFloat(soDauTien);
+            soThuHai = parseFloat(soThuHai)
+            if (ToanTu == "+")
+            {
+                ketqua = soDauTien + soThuHai;
+            }
+            if (ToanTu == "-")
+            {
+                ketqua = soDauTien - soThuHai;
+            }
+            if (ToanTu == "*")
+            {
+                ketqua = soDauTien * soThuHai;
+            }
+            if (ToanTu == "/")
+            {
+                ketqua = soDauTien / soThuHai;
+            }
+            result.value = ketqua;
+        }
+
+        let clr = function()
+        {
+            document.getElementById("result").value = "";
+        }
+    </script>
+</body>
+</html>

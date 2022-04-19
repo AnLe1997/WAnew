@@ -1,0 +1,15 @@
+h1{
+    color: gray; 
+    text-align: center;
+    background-color: red;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+#hello{
+    background-color: gray;
+}
+.special{
+    text-decoration: underline;
+}

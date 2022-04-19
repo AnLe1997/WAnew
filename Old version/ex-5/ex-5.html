@@ -1,0 +1,49 @@
+<!Doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h1 id="carList"></h1>
+    <h2 id="carCount">Số lượng: 0 car</h2>
+    <div>
+        <input placeholder="new car" id="newCar"> <button onClick="add()">add</button>
+    </div>
+    <br>
+    <div>
+        <input id="removeCar">
+        <button onClick="remove()">delete</button>
+    </div>
+    
+</body>
+<script>
+    var carsStorage = localStorage.cars;
+    var cars = [];
+    if(carsStorage) {
+        cars = carsStorage.split(',');
+    }
+
+    display();
+
+    function remove() {
+        var deletedcar = document.getElementById('removeCar').value;
+        var index = cars.indexOf(deletedcar);
+        if(index<0) return;
+        cars.splice(index,1);
+        display();
+    }
+
+    function add () {
+        newCar = document.getElementById('newCar').value;
+        cars.push(newCar);
+        display();
+    }
+
+    function display () {
+        document.getElementById('carList').innerHTML = cars;
+        document.getElementById('carCount').innerHTML = "Số lượng: " + cars.length;
+        localStorage.cars = cars;
+    }
+
+</script>
+</html>

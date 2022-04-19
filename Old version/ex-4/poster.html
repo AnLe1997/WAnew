@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h1>first comments</h1>
+    <h1>first comments</h1>
+    <h1>first comments</h1>
+    <h1>first comments</h1>
+    <h1>first comments</h1>
+    <button onClick="next()">next</button>
+</body>
+<script>
+    var state = 0;
+    function next() {
+        var comments = document.getElementById("comments");
+        if(state == 0) {
+            state ++;
+            comments.textContent = "second comments";
+        } else if (state == 1) {
+            state ++;
+            comments.textContent = "third comments";
+        } else {
+            state = 0;
+            comments.textContent = "first comments";
+        }
+    }
+</script>
+</html>

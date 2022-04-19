@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" style="width: 100%; height: 100%;">
+        <div id="leftSidebar">
+
+        </div>
+        <div id="rightSidebar">
+            <h1>Login</h1>
+            <input id="email" type="email" placeholder="Email">
+            <input id="password" type="password" placeholder="Password">
+            <button class="formButton" onclick="signIn()">SIGN IN</button>
+            <p>Don't have account? <a href="#">Create Account</a></p>
+            <p id="checkCase" style="display: none;">Login false, please try again</p>
+        </div>
+    </div>
+
+    <script>
+        let account_email = "admin";
+        let account_password = "password";
+
+        function signIn(){
+            let input_email = document.getElementById("email").value;
+            let input_password = document.getElementById("password").value; 
+            let caseBlock = document.getElementById("checkCase");
+
+            if (input_email == account_email && input_password == account_password){
+                caseBlock.style.display = "block";
+                caseBlock.innerHTML = "Sign in successful";
+                caseBlock.style.color = "green";
+                console.log("Email: ", input_email);
+                console.log("Password: ", input_password);
+            }
+            else{
+                caseBlock.style.display = "block";
+                caseBlock.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <center style="margin-top: 200px">
+        <div>
+            email: <input id="email" type="text">
+        </div>
+        <div style="margin: 5px;">
+            password: <input id="password" type="password">
+        </div>
+        <button>login</button>
+        <button onClick="save()">register</button>
+    </center>
+</body>
+<script>
+    
+    document.getElementById('email').value = localStorage.email;
+    document.getElementById('password').value = localStorage.password;
+    
+    function save() {
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+        localStorage.email = email;
+        localStorage.password = password;
+    }
+</script>
+</html>

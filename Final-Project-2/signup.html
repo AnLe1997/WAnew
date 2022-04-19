@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" style="width: 100%; height: 100%;">
+        <div id="leftSidebar">
+
+        </div>
+        <div id="rightSidebar">
+            <h1>Sign up</h1>
+            <input id="email" type="email" placeholder="Email">
+            <input id="name" type="name" placeholder="Name">
+            <input id="password" type="password" placeholder="Password">
+            <button class="formButton" onclick="signUp()">SIGN IN</button>
+            <p>Already have account? <a href="login.html">Sign in</a></p>
+            <p id="checkCase" style="display: none;">Sign up false, please try again</p>
+        </div>
+    </div>
+
+    <script>
+        function signUp(){
+            let input_email = document.getElementById("email").value;
+            let input_password = document.getElementById("password").value;
+            let input_name = document.getElementById("name").value;
+            let caseBlock = document.getElementById("checkCase")
+
+            if (input_email == "" || input_password == "" || input_name == ""){
+                console.log("Error");
+                caseBlock.style.display = "block";
+                caseBlock.style.color = "red";
+            }
+            else{
+                caseBlock.style.display = "block";
+                caseBlock.innerHTML = "Sign in successfull";
+                caseBlock.style.color = "green";
+                console.log("Sign in successful");
+                console.log("Email: ", input_email);
+                console.log("Password: ", input_password);
+                console.log("Name: ", input_name)
+            }
+        }
+    </script>
+</body>
+</html>

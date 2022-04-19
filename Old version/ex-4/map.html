@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+        <div id="map" style="width:400px;height:400px">
+</body>
+<script>
+function myMap() {
+    var mapOptions = {
+        center: new google.maps.LatLng(21.022433, 105.816024),
+        zoom: 18,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .bulb {
+                transition: 1s;
+            }
+            .small {
+                width: 100px;
+                height: 180px;
+            }
+            .large {
+                width: 200px;
+                height: 360px;
+            }
+        </style>
+    </head>
+    <body>
+            <center>
+                <h1>My Bulb</h1>
+            </center>
+            <center>
+                <img id="bulb" class="bulb small" src="imgs/bulb_off.gif" alt="chua co anh">
+            </center>
+            <center>
+                <button onClick="turnOn()">turn on</button>
+                <button>turn off</button>
+                <button onClick="larger()">larger</button>
+                <button onClick="smaller()">smaller</button>
+            </center>
+    </body>
+    <script>
+        function turnOn () {
+            document.getElementById("bulb").src="imgs/bulb_on.gif";
+        }
+        function larger () {
+            document.getElementById("bulb").className="bulb large";
+        }
+        function smaller () {
+            document.getElementById("bulb").className="bulb small"
+        }
+    </script>
+</html>

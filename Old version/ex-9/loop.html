@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <ul id="list">
+    </ul>
+    <input id="input"><button onClick="newStudent()">add</button>
+</body>
+<script>
+    var studentList = ["Hiếu", "Công Minh", "Kiên"];
+    var listView = document.getElementById('list');
+    display();
+    function display () {
+        for(var i = 0; i < studentList.length; i ++) {
+            add(studentList[i]);
+        }
+    }
+
+    function newStudent () {
+        var studentName = document.getElementById('input').value;
+        add(studentName);
+    }
+
+    function add (text) {
+        var itemView = document.createElement("li");
+        itemView.textContent = text;
+        listView.appendChild(itemView);
+    }
+</script>
+</html>

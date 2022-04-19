@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h1 id = "studentList"></h1>
+    <p id = "studentCount"></p>
+
+    <div style="margin-top: 10px">
+        <input placeholder="new student name" id="inputAdd">
+        <button onClick="add()">add student</button>
+    </div>
+    <div style="margin-top: 10px">
+        <input placeholder="delete student name" id="inputDelete">
+        <button onClick="pop()">remove student</button>
+    </div>
+
+    <div style="margin-top: 10px">
+        <input id="inputEditIndex" placeholder="student index">
+        <input id="inputEditName" placeholder="student name">
+        <button onClick="edit()">edit student</button>
+    </div>
+
+    <div style="margin-top: 10px">
+        <button>save</button>
+        <button>load</button>
+    </div>
+</body>
+<script>
+    var studentList = [];
+    var studentString = localStorage.students;
+    
+    if(studentString) {
+       studentList = JSON.parse(studentString);
+    }
+    
+    var studentListView = document.getElementById("studentList");
+    var sutentCountView = document.getElementById("studentCount");
+    display();
+
+    function display () {
+        studentListView.innerHTML = studentList;
+        sutentCountView.innerHTML = "Số lượng: " + studentList.length;
+        localStorage.students = JSON.stringify(studentList);
+    }
+
+    function pop () {
+        var deleteIndex = document.getElementById('inputDelete').value;
+        studentList.splice(deleteIndex, 1);
+        display();
+    }
+
+    function add () {
+        var newStudent = document.getElementById("inputAdd").value;
+        studentList.push(newStudent);
+        display();
+    }
+
+    function edit () {
+        var studentIndex = document.getElementById("inputEditIndex").value;
+        studentList[studentIndex] = document.getElementById("inputEditName").value;
+        console.log(studentList);
+        display();
+    }
+</script>
+</html>
