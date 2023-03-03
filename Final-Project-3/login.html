@@ -16,34 +16,11 @@
             <input id="email" type="email" placeholder="Email">
             <input id="password" type="password" placeholder="Password">
             <button class="formButton" onclick="signIn()">SIGN IN</button>
-            <p>Don't have account? <a href="#">Create Account</a></p>
+            <p>Don't have account? <a href="signup.html">Create Account</a></p>
             <p id="checkCase"></p>
         </div>
     </div>
 
-    <script>
-        function signIn(){
-            let input_email = document.getElementById("email").value;
-            let input_password = document.getElementById("password").value; 
-            let caseBlock = document.getElementById("checkCase");
-
-            let listUsers = JSON.parse(localStorage.getItem("listUsers"));
-            let listPassword = JSON.parse(localStorage.getItem("listPassword"));
-
-            for(let i = 0; i < listUsers.length && i < listPassword.length; i++){
-                if (input_email == listUsers[i] && input_password == listPassword[i]){
-                    caseBlock.style.display = "block";
-                    caseBlock.innerHTML = "Sign in successful";
-                    caseBlock.style.color = "green";
-                    console.log("Email: ", input_email);
-                    console.log("Password: ", input_password);
-                }
-                else{
-                    caseBlock.innerHTML = "Login false, please try again";
-                    caseBlock.style.color = "red";
-                }
-            }   
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

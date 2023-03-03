@@ -16,70 +16,12 @@
             <input id="email" type="email" placeholder="Email">
             <input id="name" type="name" placeholder="Name">
             <input id="password" type="password" placeholder="Password">
-            <button class="formButton" onclick="signUp()">SIGN IN</button>
+            <button class="formButton" onclick="signUp()">SIGN UP</button>
             <p>Already have account? <a href="login.html">Sign in</a></p>
             <p id="checkCase"></p>
         </div>
     </div>
 
-    <script>
-        //listUsers: lưu trữ id người dùng
-        //listPassword: lưu trữ pass người dùng
-        //listUserName: lưu trữ tên người dùng
-        function signUp(){
-            let input_email = document.getElementById("email").value;
-            let input_password = document.getElementById("password").value;
-            let input_name = document.getElementById("name").value;
-            let caseBlock = document.getElementById("checkCase");
-
-            let listUsers = [];
-            let listPassword = [];
-            let listUserName = [];
-            let isAcountExist = false;
-
-            if(JSON.parse(localStorage.getItem("listUsers") != null)){
-                listUsers = JSON.parse(localStorage.getItem("listUsers")); 
-            }
-            if(JSON.parse(localStorage.getItem("listPassword") != null)){
-                listPassword = JSON.parse(localStorage.getItem("listPassword")); 
-            }
-            if(JSON.parse(localStorage.getItem("listUserName") != null)){
-                listUserName = JSON.parse(localStorage.getItem("listUserName")); 
-            }
-        
-            if (input_email == "" || input_password == "" || input_name == ""){
-                console.log("Error");
-                caseBlock.innerHTML = "Sign up false, please fill in all areas";
-                caseBlock.style.color = "red";
-            }
-            else{
-                for(let i = 0; i <listUsers.length; i++){
-                    if(input_email == listUsers[i]){
-                        caseBlock.innerHTML = "Account already exist, choose different name";
-                        caseBlock.style.color = "red";
-                        isAcountExist = true;
-                    }   
-                }
-                if(!isAcountExist){
-                    //thêm vào array id, password, name
-                    listUsers.push(input_email);
-                    listPassword.push(input_password);
-                    listUserName.push(input_name);
-
-                    localStorage.setItem("listUsers", JSON.stringify(listUsers));
-                    localStorage.setItem("listPassword", JSON.stringify(listPassword));
-                    localStorage.setItem("listUserName", JSON.stringify(listUserName));
-
-                    caseBlock.style.display = "block";
-                    caseBlock.innerHTML = "Sign in successfull";
-                    caseBlock.style.color = "green";
-                    console.log("Sign IN successful");
-                    console.log("Email: ", input_email);
-                    console.log("Password: ", input_password);
-                    console.log("Name: ", input_name)
-                }
-            }  
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
